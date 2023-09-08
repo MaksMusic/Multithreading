@@ -14,6 +14,7 @@ public class Main {
         executorService.execute(new MyRun("загрузка 3"));
         executorService.execute(new MyRun("загрузка 4"));
         executorService.execute(new MyRun("загрузка 5"));
+        executorService.shutdown();
 
     }
 }
