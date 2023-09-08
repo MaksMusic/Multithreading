@@ -8,9 +8,7 @@ public class Main {
         int sum = DataBase.arrayList.parallelStream().mapToInt(e-> e).sum();
         System.out.println(sum);
     }
-
 }
-
 
 class DataBase{
     static List<Integer> arrayList =
