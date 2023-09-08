@@ -12,6 +12,6 @@ public class Main {
 
 class DataBase{
     static List<Integer> arrayList =
-            Arrays.asList(1,49,32,21,12,43,27,43,234,23,5,7,867,7,3,23,65,345,756,45,100);
+            Arrays.asList(1,49,77,21,12,43,27,43,234,23,5,7,867,7,3,23,65,345,756,45,100);
 
 }
