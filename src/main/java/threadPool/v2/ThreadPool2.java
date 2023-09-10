@@ -1,5 +1,6 @@
 package threadPool.v2;
 
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -32,13 +33,15 @@ public class ThreadPool2 {
         //завершения предыдущей
         //scheduledExecutorService.scheduleWithFixedDelay(new RunnableImpl2(), 3,3,TimeUnit.SECONDS);
 
-
         //завершение работы со thread pool
             Thread.sleep(20000);
             scheduledExecutorService.shutdown();
 
+            //}
 
-        //}
+
+        //Пул который сам создает потоки по мере необходимости если они не исп удаляет их
+        ExecutorService executorService = Executors.newCachedThreadPool();
     }
 
 
