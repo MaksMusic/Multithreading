@@ -16,7 +16,7 @@ public class Main {
 
         //вариант запуска потока через Callable который возвращает результат
         //так же выбросит исключение
-        //тут применяется метод executorService.submit(factorial);
+        //тут применяется метод executorService.submit(factorial)
         //вместо execute(factorial)
         //возвращаемый тип Future<Integer> параметризирован типов котоый
         //вернет данный метод call (который используется вместо run() )
