@@ -32,7 +32,7 @@ public class Main {
 
 
         executorService.shutdown();
-        executorService.awaitTermination(10, TimeUnit.SECONDS);
+        executorService.awaitTermination(5, TimeUnit.SECONDS);
         System.out.println(factorialResult);
     }
 }
