@@ -23,7 +23,7 @@ public class Main {
         CallableFactorial factorial = new CallableFactorial(5);
         Future<Integer> resultFuture = executorService.submit(factorial);
 
-        //ексепшен может быть выброшен если ввели не верное число
+        //exception может быть выброшен если ввели не верное число
         try {
             factorialResult = resultFuture.get();
         } catch (ExecutionException e) {
