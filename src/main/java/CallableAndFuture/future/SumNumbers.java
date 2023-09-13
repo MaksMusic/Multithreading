@@ -29,7 +29,7 @@ public class SumNumbers {
                 sum+=future.get();
             }
             executorService.shutdown();
-            System.out.println("Total sum " + sum);
+            System.out.println("total sum " + sum);
     }
 }
 
