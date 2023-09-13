@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.*;
 
 public class SumNumbers {
+
     private static long value = 1_000_000_000l;
     private static long sum;
 
@@ -12,6 +13,7 @@ public class SumNumbers {
         ExecutorService executorService
                 = Executors.newFixedThreadPool(10);
         List<Future<Long>> futures = new ArrayList<>();
+
 
         //разделение на 10 задач
         long valueDividedBy10 = value/10;
@@ -29,9 +31,7 @@ public class SumNumbers {
             }
             executorService.shutdown();
             System.out.println("Total sum " + sum);
-
     }
-
 }
 
 class PartialSum implements  Callable<Long>{
