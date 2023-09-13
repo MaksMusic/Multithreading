@@ -24,7 +24,6 @@ public class SumNumbers {
             futures.add(longFuture);
 
         }
-
             //получить результат работы 10 потоков
             for (Future<Long> future : futures) {
                 sum+=future.get();
@@ -50,6 +49,7 @@ class PartialSum implements  Callable<Long>{
         for (long i =from; i < to; i++) {
             localSum+=i;
         }
+
         System.out.println("sum from "+ from +" to" + to +" = "+ localSum);
         return localSum;
     }
