@@ -10,8 +10,7 @@ public class SumNumbers {
     private static long sum;
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        ExecutorService executorService
-                = Executors.newFixedThreadPool(10);
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
         List<Future<Long>> futures = new ArrayList<>();
 
         //разделение на 10 задач для 10 потоков
@@ -22,8 +21,8 @@ public class SumNumbers {
             PartialSum task = new PartialSum(from, to);
             Future<Long> longFuture = executorService.submit(task);
             futures.add(longFuture);
-
         }
+
             //получить результат работы 10 потоков
             for (Future<Long> future : futures) {
                 sum+=future.get();
@@ -41,7 +40,6 @@ class PartialSum implements  Callable<Long>{
     public PartialSum(long from, long to) {
         this.from = from;
         this.to = to;
-
     }
 
     @Override
@@ -49,7 +47,6 @@ class PartialSum implements  Callable<Long>{
         for (long i =from; i < to; i++) {
             localSum+=i;
         }
-
         System.out.println("sum from "+ from +" to" + to +" = "+ localSum);
         return localSum;
     }
