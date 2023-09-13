@@ -27,6 +27,7 @@ public class SumNumbers {
             for (Future<Long> future : futures) {
                 sum+=future.get();
             }
+
             executorService.shutdown();
             System.out.println("Total sum " + sum);
     }
