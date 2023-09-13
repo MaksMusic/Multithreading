@@ -1,4 +1,4 @@
-package CallableAndFuture;
+package CallableAndFuture.returnElement;
 
 import java.util.concurrent.*;
 
@@ -25,11 +25,14 @@ public class Main {
 
         //exception может быть выброшен если ввели не верное число
         try {
+            System.out.println(resultFuture.isDone()); // завершил ли поток работу
+            System.out.println("Хотим получить элемент");
             factorialResult = resultFuture.get();
+            System.out.println("Получили елемент");
+            System.out.println(resultFuture.isDone()); // завершил ли поток работу
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-
 
         executorService.shutdown();
         executorService.awaitTermination(5, TimeUnit.SECONDS);
