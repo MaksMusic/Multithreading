@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.concurrent.*;
 
 public class SumNumbers {
-
     private static long value = 1_000_000_000l;
     private static long sum;
 
