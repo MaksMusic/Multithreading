@@ -13,6 +13,7 @@ public class SumNumbers {
                 = Executors.newFixedThreadPool(10);
         List<Future<Long>> futures = new ArrayList<>();
 
+        //разделение на 10 задач
         long valueDividedBy10 = value/10;
         for (int i = 0; i < 10; i++) {
             long from = valueDividedBy10 * i + 1;
