@@ -14,7 +14,6 @@ public class SumNumbers {
                 = Executors.newFixedThreadPool(10);
         List<Future<Long>> futures = new ArrayList<>();
 
-
         //разделение на 10 задач
         long valueDividedBy10 = value/10;
         for (int i = 0; i < 10; i++) {
@@ -25,7 +24,8 @@ public class SumNumbers {
             futures.add(longFuture);
 
         }
-           //получить результат работы 10 потоков
+
+            //получить результат работы 10 потоков
             for (Future<Long> future : futures) {
                 sum+=future.get();
             }
