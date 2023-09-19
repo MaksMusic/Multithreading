@@ -50,6 +50,7 @@ class BestFriend extends Thread {
             System.out.println(name + " wins");
         }
     }
+
     @Override
     public void run() {
         Action reply;
